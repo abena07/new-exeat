@@ -29,7 +29,12 @@ function Booking() {
     axios.post("http://localhost:7000/create", formData).then((response) => {
       console.log(response.data);
     });
-    setFormData({goingDate: null, returnDate: null, studentID: null, reason: null});
+    setFormData({
+      goingDate: null,
+      returnDate: null,
+      studentID: null,
+      reason: null,
+    });
   };
   const [show, setShow] = useState(false);
 
@@ -64,11 +69,7 @@ function Booking() {
 
           <div className="form-group">
             <label>Reason</label>
-            <input
-              type="reason"
-              onChange={handleTextChange}
-              name="reason"
-            />
+            <input type="reason" onChange={handleTextChange} name="reason" />
           </div>
 
           <div className="form-group">
