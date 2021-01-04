@@ -5,12 +5,12 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">
+        <NavLink to="/home">
           <h1>Exeat Booking App</h1>
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
           <NavLink to="/booking">Booking</NavLink>
         </NavMenu>
         <NavBtn>
