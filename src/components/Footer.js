@@ -110,9 +110,14 @@ const FooterContainer = styled.footer`
     color: var(--mainWhite);
   }
 
+  .footer-middle a {
+    margin-top: .5rem;
+  }
+
   .footer-bottom {
     padding-top: 3rem;
     padding-bottom: 2rem;
+    text-align: center;
   }
   ul {
     list-style-type: none;
@@ -120,24 +125,24 @@ const FooterContainer = styled.footer`
 
   ul li a {
     color: var(--mainGrey);
-    text-decoration:none;
+    text-decoration: none;
+  
   }
 
-  ul li a: hover {
+  ullia: hover {
     color: (--mainLightGrey);
   }
 
-  .wrapper{
-      width:100%;
+  .wrapper {
+    width: 100%;
     display: flex;
-    justify-content:center;
-
+    justify-content: center;
   }
   .col-md-4 {
-      justify-content:space-around;
-      width:20%;
-   
-      text-align:center;
-      
+    justify-content: space-around;
+    width: 20%;
+    text-align: center;
   }
+
+  
 `;

@@ -46,8 +46,8 @@ color:#FE4880;
 
 export const NavMenu = styled.div`
 display: flex;
-align-items: center;
-margin-right: -24px;
+margin-right: 0px;
+margin-left: -25rem;
 
 @media screen and (max-width: 768px){
     display: none;
@@ -77,15 +77,13 @@ outline: none;
 cursor: pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
+margin-left: 1rem;
 
 &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;
 }
-
-
-`
-;
+`;
 
  
