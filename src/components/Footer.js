@@ -126,10 +126,16 @@ const FooterContainer = styled.footer`
   ul li a {
     color: var(--mainGrey);
     text-decoration: none;
+<<<<<<< HEAD
   
   }
 
   ullia: hover {
+=======
+  }
+
+  ulli a: hover {
+>>>>>>> bdc2242adfcdfc98c8154baf8efbdd5d735a889d
     color: (--mainLightGrey);
   }
 
@@ -141,6 +147,10 @@ const FooterContainer = styled.footer`
   .col-md-4 {
     justify-content: space-around;
     width: 20%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> bdc2242adfcdfc98c8154baf8efbdd5d735a889d
     text-align: center;
   }
 
