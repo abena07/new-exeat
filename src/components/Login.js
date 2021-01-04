@@ -33,26 +33,22 @@ function Login() {
 
     const handleLoggedin=(event) =>{
        event.preventDefault()
-
-        console.log('try again')
-        axios.post(`${API_ENDPOINT}/student/login`,{
-            
- 
-            studentID: studentID,
-            password: password,
-            email: email
-  
-          }).then((res) => {
+       axios.post(`${API_ENDPOINT}/login`,{
+           studentID: studentID,
+           password: password,
+           email: email
+        }).then((res) => {
         
               console.log('success')      
               if(res.status === 200){
-                  localStorage.setLoggedin(true)
-                  history.push("/home")
+                  setLoggedin(true)
+                  localStorage.setItem('loggedIn', true)
+                  history.push("/booking")
               }
           }).catch((err) => {
               console.log(err)
               
-             
+            
           })
     }
 
@@ -120,9 +116,6 @@ function Login() {
              <div className="form-group">
               <button onClick={handleLoggedin} >Log In</button>
              </div>
-
-
-
 
 
          </div>   
