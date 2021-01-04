@@ -10,7 +10,7 @@ function Booking() {
   const initialMount = useRef(true);
 
   const [formData, setFormData] = useState(null)
-  const [outcome, setOutcome]=useState([])
+  
 
   
   
@@ -33,13 +33,8 @@ function Booking() {
 
   const formSubmitted = (e) => {
     e.preventDefault();
-    setOutcome([formData])
-    setFormData([
-      ...formData,
-      formData
-        
-      
-    ])
+    
+   
     setFormData("")
     console.log(formData)
     axios.post("http://localhost:7000/create", formData).then((response)=>{
@@ -47,6 +42,24 @@ function Booking() {
      
     })
   }
+const [show, setShow]=useState(false);
+
+
+const display=()=>{
+  if (!show ){
+    setShow(true)
+  } else {
+    setShow(false)
+  }
+
+
+
+
+}
+
+
+
+
   return (
     <div>
       <form onSubmit={formSubmitted}>
@@ -74,21 +87,90 @@ function Booking() {
           </div>
 
           <div className="form-group">
-            <button type="submit">Book Now</button>
+            <button type="submit" onClick={display}>Book Now</button>
           </div>
 
         </div>
       </form>
-      <ul>
-        {formData.map((formData)=>(
-      <li> 
-        {formData}
-      </li>
+      {
+        show && <div>
+          <h1> {handleTextChange}</h1>
+          <h1> {handleTextChange}</h1>
+          <h1> {handleTextChange}</h1>
+          <h1> {handleTextChange}</h1>
 
-        ))}
-      </ul>
+          </div>
+      }
+      
+    
+
+        
+     
     </div>
   )
 }
 
 export default Booking
+
+
+// class AddPost extends Component{
+
+//   state = {
+//       show: false,
+//       Student Id: "",
+//       :Going Date "",
+//       Return Date: "",
+//        Reason:"",
+//   }
+
+// toggle = () => this.setState((currentState) => ({show: !currentState.show}));
+
+// handleTextChange = (event) => this.setState({studentID: event.target.value});
+
+
+// handleTextChange = (event) => this.setState({goingDate: event.target.value});
+// handleTextChange = (event) => this.setState({returnDate: event.target.value});
+// handleTextChange = (event) => this.setState({reason: event.target.value});
+
+// 
+
+// formSubmitted = (event) => {
+//     event.preventDefault();
+//     this.setState({ show: false });
+// }
+
+//   render() {
+//       return(
+//           <div className="form-inner">
+
+//           <h4>Booking</h4>
+//           <div className="form-group">
+          
+//               <button onClick={this.toggle}>Book Now<span>+</span> {this.state.show}</button>
+              
+//               {this.state.show ? 
+//               <form onSubmit={this.formSubmitted}>
+//                   <label>Student Id<input type="text" onChange={this.handleTextChange} /></label>
+//                   <br />                    
+//                   <label>Going Date<input type="date" onChange={this.changegoingDate} className="form-group"/></label>
+//                   <label>Return Date<input type="date" onChange={this.handlereturnDate}  classNme="form-group"/></label>
+//                  <label>Reason<input type="text" onChange={this.handlereturnreason}  classNme="form-group"/></label>
+//                   <br />
+//                   <button>Submit</button>
+//               </form> :
+//               <div className="section-post">
+//                   < h1>{this.state.studentID}</h1>  <h1>{this.state.goingDate} <h1/>
+//                   <h1>{this.state.returnDate}</h1>
+//                   <p>{this.state.reason}</p>
+//               </div>
+//               }
+
+//               <hr />
+
+
+//           </div>
+
+// </div>
+//       );
+//   }
+// }

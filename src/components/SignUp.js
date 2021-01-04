@@ -58,7 +58,7 @@ function SignUp() {
             
   
           .then((res) => {
-        
+            
               console.log('success')      
               if(res.status === 200){
                   localStorage.setSignedin(true)
@@ -72,7 +72,7 @@ function SignUp() {
     }
 
    const handleSignedout=(event)=>{
-        setSignedin(false)
+        setSignedin(true)
     }
 
     return(
