@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-//  import './Home.css'
+import {Link} from 'react-router-dom';
+
+import { Section } from "./hero.style";
 
 class Home extends Component {
   render() {
@@ -8,17 +10,19 @@ class Home extends Component {
       "To proceed booking sign up if you don't have an account.If you do log in and book now!";
     return (
       <div>
-        <section className="hero">
-          <div className="hero-body">
+        <Section className="hero">
             <div className="container">
-              <h1 className="title">{heading}</h1>
-              <div className="is-two-thirds column is-paddingless">
-                <h2 className="subtitle is-4">{subheading}</h2>
+              <div className="heading-text">
+                <h1>{heading}</h1>
+                <h2>{subheading}</h2>
               </div>
-              {/* <a className="button is-large is-primary" >Learn more</a> */}
+              <button>
+                <Link to="/signup" className="button is-large is-primary">
+                  SignUp
+                </Link>
+              </button>
             </div>
-          </div>
-        </section>
+        </Section>
       </div>
     );
   }
