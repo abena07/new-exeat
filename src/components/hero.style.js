@@ -32,23 +32,18 @@ export const Section = styled.div`
       position: absolute;
       top: 200px;
     }
+
     button {
+      border: 1px solid white;
       padding: .5rem 1rem;
       font-size: 18px;
       margin-top: 3rem;
-      background-color: #fe4880;
+      background-color: black;
       position: absolute;
       top: 420px;
       border-radius: 10px;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        background: white;
-        color: black;
-      }
     }
 
-    
     a {
       color: white;
       text-decoration: none
@@ -57,3 +52,5 @@ export const Section = styled.div`
 `;
 
  export default Section;
+
+
