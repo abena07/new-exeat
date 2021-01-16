@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import Img from '../Assets/hero.jpg';
+import styled from "styled-components";
+import Img from "../Assets/hero.jpg";
 
 export const Section = styled.div`
   text-align: center;
@@ -35,7 +35,7 @@ export const Section = styled.div`
 
     button {
       border: 1px solid white;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       font-size: 18px;
       margin-top: 3rem;
       background-color: black;
@@ -46,11 +46,9 @@ export const Section = styled.div`
 
     a {
       color: white;
-      text-decoration: none
+      text-decoration: none;
     }
   }
 `;
 
- export default Section;
-
-
+export default Section;

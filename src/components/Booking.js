@@ -69,7 +69,12 @@ function Booking() {
 
           <div className="form-group">
             <label>Reason</label>
-            <input type="reason" onChange={handleTextChange} name="reason" />
+            <input
+              type="reason"
+              className="text-area"
+              onChange={handleTextChange}
+              name="reason"
+            />
           </div>
 
           <div className="form-group">

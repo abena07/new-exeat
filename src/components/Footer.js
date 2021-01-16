@@ -110,7 +110,6 @@ const FooterContainer = styled.footer`
     color: var(--mainWhite);
   }
 
-
   .footer-bottom {
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -123,7 +122,6 @@ const FooterContainer = styled.footer`
   ul li a {
     color: var(--mainGrey);
     text-decoration: none;
-  
   }
 
   ullia: hover {
@@ -140,6 +138,4 @@ const FooterContainer = styled.footer`
     width: 20%;
     text-align: center;
   }
-
-  
 `;

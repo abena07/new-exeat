@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import Home from "./AllBookings";
+import Booking from "./Booking";
 
 function Login() {
   const API_ENDPOINT = "http://localhost:7000";
@@ -71,7 +71,7 @@ function Login() {
     <div>
       {loggedin ? (
         <>
-          <Home />
+          <Booking />
           <button onClick={handleLoggedout}>Log Out </button>
         </>
       ) : (
